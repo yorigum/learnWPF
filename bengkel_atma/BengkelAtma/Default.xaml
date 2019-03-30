@@ -1,0 +1,59 @@
+﻿<Window x:Class="BengkelAtmaAuto.Default"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BengkelAtmaAuto"
+        mc:Ignorable="d"
+        Title="Welcome, Login First" VerticalAlignment="Center" HorizontalAlignment="Center" MinHeight="450" MinWidth="800" WindowState="Maximized" WindowStyle="SingleBorderWindow" >
+    <Grid x:Name = "FormLayoutGrid" >
+        <Grid.Background>
+            <ImageBrush ImageSource="bg_default.jpg" Stretch="UniformToFill" Opacity="0.885"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="center" VerticalAlignment="Stretch" Height="Auto" >
+            <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Center" DockPanel.Dock="Right" Background="White" Width="400" Height="800"  >
+                <Grid Width="280"  Margin="30,30,20,15" HorizontalAlignment="Left">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" HorizontalAlignment="Left"  Text="SELAMAT DATANG" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Segoe UI Black" Grid.ColumnSpan="2" Margin="0,20,0,0" />
+                    <TextBlock Grid.Row="1" HorizontalAlignment="Left"  Text="SIBAAU LOGIN PANEL" VerticalAlignment="Top" Height="25" Width="186.27" FontSize="18" FontFamily="Segoe UI Semilight" />
+                    <Image x:Name="logo_png" Grid.Row="2" HorizontalAlignment="Left" Source="logo.png" Stretch="None" Grid.ColumnSpan="2" />
+                </Grid>
+                <Grid  Width="245.511" Height="75" HorizontalAlignment="Left" Margin="30,20,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35*" />
+                        <ColumnDefinition Width="88*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="10"/>
+                        <RowDefinition  Height="25"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Username"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="Password"/>
+                    <TextBox x:Name="tbUser"  Grid.Column="1" Grid.Row="0"/>
+                    <PasswordBox x:Name="pbPass"  Grid.Column="1" Grid.Row="2"/>
+                </Grid>
+                <Grid Margin="0,0,0,50">
+                    <Button x:Name="btnLogin" Width="80" HorizontalAlignment="Left" Content="Masuk" Margin="100,0,0,0" Height="30" VerticalAlignment="Bottom" Click="loginClick"/>
+                </Grid>
+            </StackPanel>
+
+            <Grid DockPanel.Dock="Left"  Height="auto" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" />
+        </DockPanel>
+    </Grid>
+</Window>
